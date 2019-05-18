@@ -1,0 +1,16 @@
+<div>
+  {{#if exercises}}
+  <div class="card text-black mb-3">
+    <h2 class="card-header">{{email}}</h2>
+    {{#each exercises}}
+    <div class="card-body">
+      <h3 class="card-title">Exercise : {{this.description}} </h3>
+      <h4 class="card-text">Duration : {{this.duration}}</h4>
+      <p>Date : {{dateConverter this.date}}</p>
+    </div>
+    {{/each}}
+  </div>
+  {{else}}
+  {{{errorMessage msg className}}}
+  {{/if}}
+</div>

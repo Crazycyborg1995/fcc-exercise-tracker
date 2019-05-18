@@ -1,0 +1,23 @@
+<form class="form-container" method="POST" action="/api/exercise/add">
+  {{#if config}}
+  {{{alert config.className config.msg config.token }}}
+  {{/if}}
+  <h2>ADD EXERCISE</h2>
+  <div class="form-group">
+    <label for="userId">User Token</label>
+    <input id="userId" class="form-control" type="text" name='token' placeholder="Token here...">
+  </div>
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <input id="desc" class="form-control" type="text" name="desc" placeholder="description">
+  </div>
+  <div class="form-group">
+    <label for="time">Duration</label>
+    <input id="time" class="form-control" type="text" name="time" placeholder="duration (mins)">
+  </div>
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input id="date" class="form-control" type="date" name="date" placeholder="YYYY/MM/DD">
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+</form>
